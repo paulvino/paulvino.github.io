@@ -22,17 +22,8 @@
 <body>
   <main>
     <img src="apple-touch-icon.png" width="96" height="96" alt="" style="border-radius:22px">
-    <p id="hint">Нажмите «Поделиться» → «На экран Домой», чтобы добавить ярлык.</p>
+    <p>Чтобы добавить ярлык с гантелью, выберите «Поделиться» → «На экран Домой» на этой странице.</p>
     <a id="open" href="https://script.google.com/macros/s/AKfycbx18cD7AS2pRLlHy02X2-06lAgJWjdRAQldtZ1ASxAJoZ1nPNsiKmJw9n-MALjYbNuCnA/exec">Открыть тренировку</a>
   </main>
-  <script>
-    // С ярлыка на экране «Домой» сразу уходим в приложение.
-    // В обычном Safari остаёмся на странице, чтобы iOS прочитала иконку.
-    const standalone = navigator.standalone === true || matchMedia('(display-mode: standalone)').matches;
-    if (standalone) {
-      document.getElementById('hint').textContent = 'Открываю тренировку…';
-      location.replace(document.getElementById('open').href);
-    }
-  </script>
 </body>
 </html>
